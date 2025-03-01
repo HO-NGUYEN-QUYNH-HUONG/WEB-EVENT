@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB MANAGEMENT</title>
+    <link rel="icon" href="./assets/img/web.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
+</head>
+<body>
+    </div>
+    <div id="main">
+        <div id="header">
+            <!--begin : nav-->
+            <ul id="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#ticket">Ticket</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="#footer">
+                        More
+                        <i class="nav-arrow-down ti-arrow-circle-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!--end : nav-->
+
+            <!--begin: menu-toggle-->
+            <button id="menu-toggle" class="menu-icon">&#9776;</button>
+
+            <!--begin: sidebar-->
+            <div id="overlay" class="overlay" style="display: none;"></div>     <!-- Lớp phủ mờ -->
+            <div id="sidebar" class="sidebar" style="left: -250px;">
+                <button id="close-btn" class="close-btn">&times;</button> 
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#events">EVENTS</a></li>
+                    <li><a href="#ticket">TICKET</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#footer">MORE</a></li>
+                </ul>
+            </div>
+            <!--end: sidebar-->        
+
+
+            <!--begin : search button-->
+            <div class="search-btn">
+                <i class="search-icon ti-search"></i>
+            </div>
+            <!--end : search button-->
+
+        </div>
+
+        <!--begin: slider-->
+        <div id="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="./assets/img/concert1.avif" alt="image 1">
+                    <div class="text-content">
+                        <h2 class="text-heading"><b>EchoBeats</b></h2>
+                        <div class="text-description">An electrifying live music event featuring top artists and bands, bringing an unforgettable night of rhythm, energy, and connection.</div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="./assets/img/image5.avif" alt="image 2">
+                    <div class="text-content">
+                        <h2 class="text-heading"><b>Canvas Visions</b></h2>
+                        <div class="text-description">A captivating showcase of contemporary and classic artworks, celebrating creativity, expression, and the beauty of visual storytelling.</div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="./assets/img/photo.avif" alt="image 3">
+                    <div class="text-content">
+                        <h2 class="text-heading"><b>LeadForward</b></h2>
+                        <div class="text-description">A leadership seminar focused on personal growth, strategic decision-making, and effective team management.</div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+        <!--end: slider-->
+
+
+        <!--begin: content-->
+        <div id="content">
+            <!--about section-->
+            <div id="events" class="content-section">
+                <h2 class="section-heading">THE EVENT</h2>
+                <p class="section-sub-heading">An event is not just a gathering; it's a moment to create memories and inspire change.</p>
+                <p class="about-text">A website for event management typically allows users to browse, create, and manage events. It provides features like event registration, ticket booking, schedules, and attendee information, offering a seamless experience for both organizers and participants.</p>
+
+                <div class="row event-list">
+                    <div class="col col-third text-center">
+                       <p class="event-name"><b>Concert of the Year</b></p>
+                       <img src="./assets/img/concert.jpg" alt="Concert of the Year" class="event-img">
+                       <p class="event-description">A live music performance featuring artists or bands, creating an electrifying atmosphere with lights, sound, and an enthusiastic audience.</p>
+                       <p class="event-price"><b>Cost: </b>200.000 VNĐ</p>
+                       <p class="event-location"><b>Location: </b>Hải Phòng</p>
+                    </div>
+
+                    <div class="col col-third text-center">
+                        <p class="event-name"><b>Tech Conference 2025</b></p>
+                        <img src="./assets/img/tech.jpg" alt="Tech Conference 2025" class="event-img">
+                        <p class="event-description">An event where industry experts, innovators, and tech enthusiasts gather to discuss the latest advancements, trends, and future technologies.</p>
+                       <p class="event-price"><b>Cost: </b>150.000 VNĐ</p>
+                       <p class="event-location"><b>Location: </b>Hà Nội</p>
+
+                       <!-- Khung Sold Out -->
+                        <div class="sold-out">
+                            <i>Sold Out</i>
+                        </div>
+                    </div>
+
+                    <div class="col col-third text-center">
+                        <p class="event-name"><b>Art Exhibition: Colors of Life</b></p>
+                        <img src="./assets/img/art.jpg" alt="Name" class="event-img">
+                        <p class="event-description">A curated showcase of artistic works, ranging from paintings to digital art, offering visitors an immersive experience of creativity and expression.</p>
+                       <p class="event-price"><b>Cost: </b>100.000 VNĐ</p>
+                       <p class="event-location"><b>Location: </b>HO CHI MINH city</p>
+                    </div>
+
+                    <div class="col col-third text-center">
+                        <p class="event-name"><b>Book Haven Fair</b></p>
+                        <img src="./assets/img/image6.avif" alt="Name" class="event-img">
+                        <p class="event-description">Book Haven Fair is a gathering for book lovers, featuring a wide range of books, author meet-and-greets, and exclusive signings. It’s the perfect place to explore new reads and connect with fellow literature enthusiasts.</p>
+                       <p class="event-price"><b>Cost: </b>100.000 VNĐ</p>
+                       <p class="event-location"><b>Location: </b>Đà Nẵng</p>
+                    </div>
+                     <!--<div class="clear"></div> nền ôm hết item-->
+                </div>
+            </div>
+
+            <!--ticket section-->
+            <div id="ticket" class="ticket-section">
+                <div class="content-section">
+                    <h2 class="section-heading text-white">THE TICKET</h2>
+                    <p class="section-sub-heading text-white">Remember to book your tickers!</p>
+
+                    <!--Tickets-->
+                    <ul class="ticket-list">
+                        <li>September <span class="sold-out">Sold out</span></li>
+                        <li>October <span class="sold-out">Sold out</span></li>
+                        <li>November <span class="quantity">15</span></li>
+                    </ul>
+                    <!--end tickets-->
+
+                    <!--places-->
+                    <!--Ha Noi-->
+                    <div class="row places-list">
+                        <div class="col col-third">
+                            <img src="./assets/img/hanoi.jpg" alt="Ha Noi" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">HA NOI - Tech Conference 2025</h3>
+                                <p class="place-time">Fri 27 Sep 2016</p>
+                                <p class="place-desc">Vietnam’s capital, famous for its ancient charm, bustling Old Quarter, and cultural landmarks like Hoan Kiem Lake and the Temple of Literature. A perfect mix of tradition and modernity.</p>
+                                <button class="btn s-full-width js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+                        
+                        <!--HO CHI MINH City-->
+                        <div class="col col-third">
+                            <img src="./assets/img/hcm.jpg" alt="HCM" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">HO CHI MINH City - Art Exhibition: Colors of Life</h3>
+                                <p class="place-time">Sat 28 Nov 2016</p>
+                                <p class="place-desc">A vibrant economic hub known for its dynamic lifestyle, rich history, and diverse cuisine. The city blends modern skyscrapers with historic landmarks like Notre-Dame Cathedral and Ben Thanh Market.</p>
+                                <button class="btn s-full-width js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+                        
+                        <!--Da Nang-->
+                        <div class="col col-third">
+                            <img src="./assets/img/dn.jpg" alt="Da Nang" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">DA NANG - Book Haven Fair</h3>
+                                <p class="place-time">Sun 29 Nov 2016</p>
+                                <p class="place-desc">A coastal city with stunning beaches, scenic mountains, and a laid-back atmosphere. Known for landmarks like the Golden Bridge, My Khe Beach, and Marble Mountains.</p>
+                                <button class="btn s-full-width js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+
+                        <!--Hai Phong-->
+                        <div class="col col-third">
+                            <img src="./assets/img/hp.jpg" alt="Hai Phong" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">HAI PHONG - Concert of the Year</h3>
+                                <p class="place-time">Sun 23 Nov 2016</p>
+                                <p class="place-desc">A major port city with a unique blend of industrial growth and coastal charm. It’s a gateway to Cat Ba Island and Ha Long Bay, offering seafood delights and colonial architecture.</p>
+                                <button class="btn s-full-width js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+                        <!--<div class="clear"></div> cho nền ôm hết được item bên trong-->
+                    </div>
+                </div>
+            </div>
+            <!--end: content-->
+
+            <!--Begin: contact section-->
+            <div id="contact" class="content-section">
+                <h2 class="section-heading">CONTACT</h2>
+                <p class="section-sub-heading">A way to connect or communicate.
+                    
+                    <!--khung thông tin bên trái-->
+                    <div class="row contact-content">
+                        <div class="col col-half contact-info">
+                            <p><i class="ti-location-pin"></i>HO CHI MINH City</p>
+                            <p><i class="ti-mobile"></i>Phone: +097 377 2863</p>
+                            <p><i class="ti-email"></i>Email: meomeo@gmail.com</p>
+                        </div>
+                        
+                        <!--khung thông tin bên phải-->
+                        <div class="col col-half contact-form">
+                            <form action="">
+                                <div class="row">
+                                    <div class="col col-half">
+                                        <input type="text" name="" placeholder="Name" required id="" class="form-control">
+                                    </div>
+
+                                    <div class="col col-half">
+                                        <input type="email" name="" placeholder="Email" required id="" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row mt-8">
+                                    <div class="col col-full">
+                                        <textarea name="" placeholder="Message" required id="" class="form-control" rows="5"></textarea>
+                                    </div>
+                                </div>
+                                <input class="btn pull-right mt-16" type="submit" value="SEND">
+                            </form>
+                        </div>
+                    </div>
+                </p>
+            </div>
+            <!--End: contact section-->
+
+            <!--Begin: img of contant-->
+            <div class="seminar-section">
+                <img src="./assets/img/seminar.avif" alt="Seminar">
+            </div>
+            <!--End: img of contant-->
+        </div>
+
+        <!--Begin: Footer-->
+        <div id="footer">
+            <div class="socials-list">
+                <a href=""><i class="ti-facebook"></i></a>
+                <a href=""><i class="ti-instagram"></i></a>
+                <a href=""><i class="ti-youtube"></i></a>
+                <a href=""><i class="ti-pinterest"></i></a>
+                <a href=""><i class="ti-twitter"></i></a>
+                <a href=""><i class="ti-linkedin"></i></a>
+            </div>
+            <p class="copyright">Powered by <a href="">w3.css</a></p>
+            <p class="thank">THANK YOU!</p>
+        </div>
+        <!--End: Footer-->
+    </div>
+
+    <!--modal-->
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
+                <i class="ti-close"></i>
+            </div>
+            
+            <!--header-->
+            <header class="modal-header">
+                <i class="modal-heading-icon ti-bag"></i>
+                Tickets
+            </header>
+
+            <!--body-->
+            <div class="modal-body">
+                <p id="event-info" style="font-weight: bold;"></p> <!-- Thêm dòng này để hiển thị thông tin sự kiện -->
+                <label for="ticket-quantity" class="modal-label">
+                    <i class="ti-shopping-cart"></i>
+                    Tickets, $15 per person
+                </label>
+                <input id="ticket-quantity" type="text" class="modal-input" placeholder="How many?">
+
+                <label for="ticket-email" class="modal-label">
+                    <i class="ti-user"></i>
+                    Send to
+                </label>
+                <input id="ticket-email" type="email" class="modal-input" placeholder="Enter email...">
+
+                <!--button buy-->
+                <button id="buy-tickets">
+                    Pay <i class="ti-check"></i>
+                </button>
+            </div>
+
+            <!--footer modal-->
+            <footer class="modal-footer">
+                <p class="modal-help">Need <a href="">help?</a></p>
+            </footer>
+
+            <!--hiển thị thông báo đã thanh toán or cảnh báo-->
+            <p id="confirmation-message" style="color: green; font-weight: bold; margin-top: 10px;"></p>
+        </div>
+    </div>
+
+    <!--thêm nút Back to Top-->
+    <button id="back-to-top" style="display: none;"><i class="ti-arrow-up"></i></button>
+
+    <script defer src="./assets/script/script.js"></script>
+</body>
+</html>
