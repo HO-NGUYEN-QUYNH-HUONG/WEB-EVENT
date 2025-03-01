@@ -1,0 +1,10 @@
+# Bỏ qua file tạm
+*.log
+*.cache
+*.tmp
+
+# Bỏ qua file nặng
+*.mp4
+*.zip
+*.psd
+*.exe
