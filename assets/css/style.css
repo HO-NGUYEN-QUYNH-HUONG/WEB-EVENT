@@ -192,8 +192,8 @@ html{
 /* slider */
 #slider {
     position: relative;
-    /* max-width: 100%; */
-    width: 100vw;
+    max-width: 100%;
+    /* width: 100vw; */
     height: 720px;
     margin: 0;
     overflow: hidden;
@@ -216,7 +216,7 @@ html{
     width: 65%;
     height: 100%;
     object-fit: cover;
-    max-width: 1780px;
+    /* max-width: 1780px; */
     max-height: 720px;
 }
 
