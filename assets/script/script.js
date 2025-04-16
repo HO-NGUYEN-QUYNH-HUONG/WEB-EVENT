@@ -74,13 +74,13 @@ function showBuyTickets(eventIndex) {
 
     // Hiển thị thông tin sự kiện và địa điểm
     const eventInfo = document.getElementById("event-info");
-    eventInfo.textContent = `Sự kiện: ${event.name} - Địa điểm: ${event.location} - Ngày: ${event.date}`;
+    eventInfo.textContent = `Event: ${event.name} - Location: ${event.location} - Date: ${event.date}`;
 
     // Kiểm tra xem sự kiện đã bán hết chưa
     const soldOutElement = document.querySelector('.sold-out'); // Lấy phần tử Sold Out
     if (event.soldOut) {
         confirmationMessage.style.color = "red";
-        confirmationMessage.innerHTML = "<i>⚠️ Xin lỗi, sự kiện này đã bán hết!</i>"; // Thông báo nghiêng
+        confirmationMessage.innerHTML = "<i>Sorry, this event was sold out!</i>"; // Thông báo nghiêng
         soldOutElement.style.display = "block"; // Hiển thị khung Sold Out
     } else {
         confirmationMessage.textContent = ""; // Xóa thông điệp trước đó
@@ -117,13 +117,13 @@ buyTicketsBtn.addEventListener("click", function() {
 
     if (event.soldOut) {
         confirmationMessage.style.color = "red";
-        confirmationMessage.innerHTML = "<i>Xin lỗi, sự kiện này đã bán hết!</i>"; // Thông báo nghiêng
+        confirmationMessage.innerHTML = "<i>Sorry, this event was sold out!</i>"; // Thông báo nghiêng
         return;
     }
 
     if (!ticketQuantity || isNaN(ticketQuantity) || ticketQuantity <= 0) {
         confirmationMessage.style.color = "red";
-        confirmationMessage.textContent = "Vui lòng nhập số lượng vé hợp lệ!";
+        confirmationMessage.textContent = "Please enter the valid number of tickets!";
         return;
     }
 
@@ -132,24 +132,24 @@ buyTicketsBtn.addEventListener("click", function() {
 
     if (!ticketEmail || !ticketEmail.includes("@")) {
         confirmationMessage.style.color = "red";
-        confirmationMessage.textContent = "Vui lòng nhập email hợp lệ!";
+        confirmationMessage.textContent = "Please enter a valid email!";
         return;
     }
 
     confirmationMessage.style.color = "green";
-    confirmationMessage.textContent = `Bạn đã đặt ${ticketQuantity} vé cho "${event.name}" tại ${event.location}. Vé sẽ được gửi đến: ${ticketEmail}`;
+    confirmationMessage.textContent = `You have booked ${ticketQuantity} tickets for "${event.name}" in ${event.location}. Tickets will be sent: ${ticketEmail}`;
 
     // Nội dung email
-    const subject = encodeURIComponent(`Xác nhận đặt vé cho ${event.name}`);
+    const subject = encodeURIComponent(`Confirm the booking for ${event.name}`);
     const body = encodeURIComponent(
-        `Xin chúc mừng!\n\n` +
-        `Bạn đã đặt thành công ${ticketQuantity} vé cho "${event.name}"!\n` +
-        `Địa điểm: ${event.location}\n` +
-        `Thời gian: ${event.date}\n` +
-        `Tổng giá: ${totalPrice.toLocaleString()} VNĐ\n` +
-        `Vui lòng kiểm tra email của bạn để biết thêm chi tiết.\n\n` +
-        `Trân trọng,\n` +
-        `Ban tổ chức sự kiện`
+        `Congratulations!\n\n` +
+        `You have successfully book ${ticketQuantity} tickets for "${event.name}"!\n` +
+        `Location: ${event.location}\n` +
+        `Time: ${event.date}\n` +
+        `Total price: ${totalPrice.toLocaleString()} VNĐ\n` +
+        `Please check your email for more details.\n\n` +
+        `Best regards,\n` +
+        `Event Organizing Committee.`
     );
 
     // Mở Gmail với nội dung email đã được điền sẵn
